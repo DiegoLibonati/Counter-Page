@@ -1,0 +1,77 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+.body{
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 20rem;
+}
+
+    .section_h2{
+        font-size: 5rem;
+        padding: 1rem;
+    }
+
+    .number_counter{
+        font-size: 3rem;
+        padding: 1rem;
+    }
+
+    .section_buttons{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .section_buttons button{
+        flex: 1 1 auto;
+        text-transform: uppercase;
+        min-width: 8rem;
+        min-height: 5rem;
+        margin: .5rem;
+        font-size: 1rem;
+        background-color: #FFFFFF;
+        border-radius: 2rem;
+    }
+
+@media screen and (min-width:768px){
+    
+    .section{
+        width: 100%;
+        height: 35rem;
+    }
+
+    .section_h2{
+        font-size: 10rem;
+        padding: 1rem;
+    }
+
+    .number_counter{
+        font-size: 7rem;
+        padding: 1rem;
+    }
+
+    .section_buttons button{
+        cursor: pointer;
+    }
+}
