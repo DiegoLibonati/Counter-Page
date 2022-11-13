@@ -35,7 +35,7 @@ I made a web page that contains a simple counter, this counter could increment t
 
 ## Portfolio Link
 
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Counter%20page`
+`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Counter%20Page`
 
 ## Video
 
