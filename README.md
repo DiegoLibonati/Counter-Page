@@ -23,19 +23,9 @@ I made a web page that contains a simple counter, this counter could increment t
 2. CSS3
 3. HTML5
 
-## Galery
-
-![Counter](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Javascript/Imagenes/counter-0.jpg)
-
-![Counter](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Javascript/Imagenes/counter-1.jpg)
-
-![Counter](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Javascript/Imagenes/counter-2.jpg)
-
-![Counter](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/Javascript/Imagenes/counter-3.jpg)
-
 ## Portfolio Link
 
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Counter%20Page`
+[`https://www.diegolibonati.com.ar/#/project/86`](https://www.diegolibonati.com.ar/#/project/86)
 
 ## Video
 
