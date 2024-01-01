@@ -13,13 +13,20 @@
 2. Join to the correct path of the clone
 3. Open index.html in your favorite navigator
 
+---
+
+1. Clone the repository
+2. Join to the correct path of the clone
+3. Execute: `yarn install`
+4. Execute: `yarn dev`
+
 ## Description
 
 I made a web page that contains a simple counter, this counter could increment the result shown on the screen, decrement that value and even do a reset to return to 0 its default value. Also if the number is positive it will be green, if it is negative it will be red and if the default is 0 it will be black.
 
 ## Technologies used
 
-1. Javascript
+1. Typescript
 2. CSS3
 3. HTML5
 
@@ -36,31 +43,31 @@ https://user-images.githubusercontent.com/99032604/198900237-ea0835d1-7b2f-4452-
 Here we get the `Decrease` button. It will subtract 1 from the general counter:
 
 ```
-const btnDecrease = document.getElementById("btndecrease");
+const btnDecrease = document.getElementById("btndecrease") as HTMLButtonElement;
 ```
 
 Here we get the `Reset` button. This button will reset the general counter to 0:
 
 ```
-const btnReset = document.getElementById("btnreset");
+const btnReset = document.getElementById("btnreset") as HTMLButtonElement;
 ```
 
 Here we get the `Increase` button. This button will add 1 to the general counter:
 
 ```
-const btnIncrease = document.getElementById("btnincrease");
+const btnIncrease = document.getElementById("btnincrease") as HTMLButtonElement;
 ```
 
 Here we get the element which will show the counter or the number we are managing in the page:
 
 ```
-const numberCounter = document.querySelector(".number_counter");
+const numberCounter = document.querySelector(".number_counter") as HTMLHeadingElement;
 ```
 
 This is the variable that we will use to add, subtract or reset the counter with each click:
 
 ```
-let count = 0;
+let count: number = 0;
 ```
 
 Here to the increment button we assign a click event, in each click it will add 1 to the general counter, it will also show it in the `numberCounter` element and finally it will execute the `Colors()` function:
@@ -69,7 +76,7 @@ Here to the increment button we assign a click event, in each click it will add 
 btnIncrease.addEventListener("click", () => {
   count++;
 
-  numberCounter.textContent = count;
+  numberCounter.textContent = String(count);
 
   Colors();
 });
@@ -81,7 +88,7 @@ Here to the increment button we assign a click event, in each click it will retu
 btnReset.addEventListener("click", () => {
   count = 0;
 
-  numberCounter.textContent = count;
+  numberCounter.textContent = String(count);
 
   Colors();
 });
@@ -94,7 +101,7 @@ Here to the increment button we assign a click event, in each click it will subt
 btnDecrease.addEventListener("click", () => {
   count--;
 
-  numberCounter.textContent = count;
+  numberCounter.textContent = String(count);
 
   Colors();
 });
@@ -107,10 +114,13 @@ The `Colors()` function will change the style of the element containing the gene
 function Colors() {
   if (count > 0) {
     numberCounter.style.color = "green";
+    return
   } else if (count < 0) {
     numberCounter.style.color = "red";
-  } else {
-    numberCounter.style.color = "black";
+    return
   }
+
+  numberCounter.style.color = "black";
+  return
 }
 ```
