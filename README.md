@@ -111,16 +111,16 @@ btnDecrease.addEventListener("click", () => {
 The `Colors()` function will change the style of the element containing the general counter depending on whether it is a positive, negative or neutral number:
 
 ```
-function Colors() {
+const Colors = (): void => {
   if (count > 0) {
     numberCounter.style.color = "green";
-    return
+    return;
   } else if (count < 0) {
     numberCounter.style.color = "red";
-    return
+    return;
   }
 
   numberCounter.style.color = "black";
-  return
-}
+  return;
+};
 ```

@@ -2,22 +2,24 @@ const btnDecrease = document.getElementById("btndecrease") as HTMLButtonElement;
 const btnReset = document.getElementById("btnreset") as HTMLButtonElement;
 const btnIncrease = document.getElementById("btnincrease") as HTMLButtonElement;
 
-const numberCounter = document.querySelector(".number_counter") as HTMLHeadingElement;
+const numberCounter = document.querySelector(
+  ".number_counter"
+) as HTMLHeadingElement;
 
 let count: number = 0;
 
-function Colors() {
+const Colors = (): void => {
   if (count > 0) {
     numberCounter.style.color = "green";
-    return
+    return;
   } else if (count < 0) {
     numberCounter.style.color = "red";
-    return
+    return;
   }
 
   numberCounter.style.color = "black";
-  return
-}
+  return;
+};
 
 btnIncrease.addEventListener("click", () => {
   count++;
