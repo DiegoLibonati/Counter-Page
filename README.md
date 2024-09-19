@@ -1,4 +1,4 @@
-# Counter-Page
+# Counter Page
 
 ## Getting Started
 
@@ -32,7 +32,7 @@ I made a web page that contains a simple counter, this counter could increment t
 
 ## Portfolio Link
 
-[`https://www.diegolibonati.com.ar/#/project/86`](https://www.diegolibonati.com.ar/#/project/86)
+[`https://www.diegolibonati.com.ar/#/project/Counter-Page`](https://www.diegolibonati.com.ar/#/project/Counter-Page)
 
 ## Video
 
