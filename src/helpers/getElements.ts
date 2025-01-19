@@ -3,6 +3,6 @@ export const getElements = () => ({
   btnReset: document.getElementById("btnreset") as HTMLButtonElement,
   btnIncrease: document.getElementById("btnincrease") as HTMLButtonElement,
   numberCounter: document.querySelector(
-    ".number_counter"
+    ".counter__number"
   ) as HTMLHeadingElement,
 });
