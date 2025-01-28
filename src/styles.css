@@ -1,4 +1,12 @@
-.counter__page {
+.main-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.counter-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,23 +14,25 @@
   height: 20rem;
 }
 
-.counter__title {
+.counter-section__title {
   font-size: 5rem;
   padding: 1rem;
 }
 
-.counter__number {
+.counter-section__number {
   font-size: 3rem;
   padding: 1rem;
 }
 
-.counter__btns {
+.counter-section__actions {
   display: flex;
   flex-direction: row;
   padding: 1rem;
 }
 
-.counter__btns button {
+.counter-section__actions-increase,
+.counter-section__actions-reset,
+.counter-section__actions-decrease {
   flex: 1 1 auto;
   text-transform: uppercase;
   min-width: 8rem;
@@ -34,22 +44,24 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section {
+  .counter-section {
     width: 100%;
     height: 35rem;
   }
 
-  .counter__title {
+  .counter-section__title {
     font-size: 10rem;
     padding: 1rem;
   }
 
-  .counter__number {
+  .counter-section__number {
     font-size: 7rem;
     padding: 1rem;
   }
 
-  .counter__btns button {
+  .counter-section__actions-increase,
+  .counter-section__actions-reset,
+  .counter-section__actions-decrease {
     cursor: pointer;
   }
 }

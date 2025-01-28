@@ -16,16 +16,34 @@
     <link rel="stylesheet" type="text/css" href="./src/styles.css" />
   </head>
   <body>
-    <main>
-      <section class="counter__page">
-        <h2 class="counter__title">Counter</h2>
+    <main class="main-counter">
+      <section class="counter-section">
+        <h2 class="counter-section__title">Counter</h2>
 
-        <h1 class="counter__number">0</h1>
+        <h1 class="counter-section__number">0</h1>
 
-        <article class="counter__btns">
-          <button id="btndecrease" aria-label="decrease">decrease</button>
-          <button id="btnreset" aria-label="reset">reset</button>
-          <button id="btnincrease" aria-label="increase">increase</button>
+        <article class="counter-section__actions">
+          <button
+            id="btndecrease"
+            aria-label="decrease"
+            class="counter-section__actions-decrease"
+          >
+            decrease
+          </button>
+          <button
+            id="btnreset"
+            aria-label="reset"
+            class="counter-section__actions-reset"
+          >
+            reset
+          </button>
+          <button
+            id="btnincrease"
+            aria-label="increase"
+            class="counter-section__actions-increase"
+          >
+            increase
+          </button>
         </article>
       </section>
     </main>
