@@ -6,7 +6,7 @@
   height: 100vh;
 }
 
-.counter-section {
+.counter {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,25 +14,25 @@
   height: 20rem;
 }
 
-.counter-section__title {
+.counter__title {
   font-size: 5rem;
   padding: 1rem;
 }
 
-.counter-section__number {
+.counter__number {
   font-size: 3rem;
   padding: 1rem;
 }
 
-.counter-section__actions {
+.counter__actions {
   display: flex;
   flex-direction: row;
   padding: 1rem;
 }
 
-.counter-section__actions-increase,
-.counter-section__actions-reset,
-.counter-section__actions-decrease {
+.counter__btn-increase,
+.counter__btn-reset,
+.counter__btn-decrease {
   flex: 1 1 auto;
   text-transform: uppercase;
   min-width: 8rem;
@@ -44,24 +44,24 @@
 }
 
 @media screen and (min-width: 768px) {
-  .counter-section {
+  .counter {
     width: 100%;
     height: 35rem;
   }
 
-  .counter-section__title {
+  .counter__title {
     font-size: 10rem;
     padding: 1rem;
   }
 
-  .counter-section__number {
+  .counter__number {
     font-size: 7rem;
     padding: 1rem;
   }
 
-  .counter-section__actions-increase,
-  .counter-section__actions-reset,
-  .counter-section__actions-decrease {
+  .counter__btn-increase,
+  .counter__btn-reset,
+  .counter__btn-decrease {
     cursor: pointer;
   }
 }
