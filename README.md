@@ -1,11 +1,17 @@
 # Counter Page
 
+## Educational Purpose
+
+This project was created primarily for **educational and learning purposes**.  
+While it is well-structured and could technically be used in production, it is **not intended for commercialization**.  
+The main goal is to explore and demonstrate best practices, patterns, and technologies in software development.
+
 ## Getting Started
 
 1. Clone the repository
 2. Join to the correct path of the clone
 3. Execute: `yarn install` or `npm install`
-4. Execute: `yarn dev` or `npm dev`
+4. Execute: `yarn run dev` or `npm run dev`
 
 ## Description
 
@@ -28,15 +34,16 @@ There are no dependencies.
 #### devDependencies
 
 ```
-"@types/jest": "^29.5.14"
 "@testing-library/dom": "^10.4.0"
 "@testing-library/jest-dom": "^6.6.3"
 "@testing-library/user-event": "^14.5.2"
+"@types/jest": "^29.5.14"
 "jest": "^29.7.0"
 "jest-environment-jsdom": "^29.7.0"
 "ts-jest": "^29.2.5"
+"ts-node": "^10.9.2"
 "typescript": "^5.2.2"
-"vite": "^5.1.4"
+"vite": "^7.1.6"
 ```
 
 ## Portfolio Link
@@ -51,3 +58,5 @@ https://user-images.githubusercontent.com/99032604/198900237-ea0835d1-7b2f-4452-
 
 1. Join to the correct path of the clone
 2. Execute: `yarn test` or `npm test`
+
+## Known Issues

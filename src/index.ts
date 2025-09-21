@@ -1,5 +1,5 @@
-import { rootCss } from "./constants/configCss";
-import { getElements } from "./helpers/getElements";
+import { rootCss } from "@src/constants/configCss";
+import { getElements } from "@src/helpers/getElements";
 
 let count: number;
 
