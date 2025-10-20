@@ -1,0 +1,16 @@
+.action {
+  flex: 1 1 auto;
+  text-transform: uppercase;
+  min-width: 8rem;
+  min-height: 5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--white-color);
+  border-radius: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .action {
+    cursor: pointer;
+  }
+}

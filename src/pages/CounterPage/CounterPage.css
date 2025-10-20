@@ -1,4 +1,4 @@
-.main-counter {
+.counter-page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,19 +30,6 @@
   padding: 1rem;
 }
 
-.counter__btn-increase,
-.counter__btn-reset,
-.counter__btn-decrease {
-  flex: 1 1 auto;
-  text-transform: uppercase;
-  min-width: 8rem;
-  min-height: 5rem;
-  margin: 0.5rem;
-  font-size: 1rem;
-  background-color: var(--white-color);
-  border-radius: 2rem;
-}
-
 @media screen and (min-width: 768px) {
   .counter {
     width: 100%;
@@ -57,11 +44,5 @@
   .counter__number {
     font-size: 7rem;
     padding: 1rem;
-  }
-
-  .counter__btn-increase,
-  .counter__btn-reset,
-  .counter__btn-decrease {
-    cursor: pointer;
   }
 }
