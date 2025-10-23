@@ -42,7 +42,7 @@ describe("CounterPage.ts", () => {
 
       const title = screen.getByText("Counter");
       const number = screen.getByText("0");
-      const actions = container.querySelector(".counter__actions");
+      const actions = container.querySelector<HTMLElement>(".counter__actions");
 
       expect(title).toBeInTheDocument();
       expect(number).toBeInTheDocument();
@@ -52,7 +52,7 @@ describe("CounterPage.ts", () => {
     test("It should render all 3 action buttons", () => {
       renderComponent();
 
-      const buttons = document.querySelectorAll("button");
+      const buttons = document.querySelectorAll<HTMLButtonElement>("button");
       expect(buttons).toHaveLength(3);
 
       expect(
@@ -72,24 +72,26 @@ describe("CounterPage.ts", () => {
       renderComponent();
 
       const btnIncrease = screen.getByRole("button", { name: /increase/i });
-      const number = document.querySelector(".counter__number") as HTMLElement;
+      const number =
+        document.querySelector<HTMLHeadingElement>(".counter__number");
 
       await user.click(btnIncrease);
 
-      expect(number.textContent).toBe("1");
-      expect(number.style.color).toBe(theme.colors.green);
+      expect(number!.textContent).toBe("1");
+      expect(number!.style.color).toBe(theme.colors.green);
     });
 
     test("It should decrease the counter and set color to red", async () => {
       renderComponent();
 
       const btnDecrease = screen.getByRole("button", { name: /decrease/i });
-      const number = document.querySelector(".counter__number") as HTMLElement;
+      const number =
+        document.querySelector<HTMLHeadingElement>(".counter__number");
 
       await user.click(btnDecrease);
 
-      expect(number.textContent).toBe("-1");
-      expect(number.style.color).toBe(theme.colors.red);
+      expect(number!.textContent).toBe("-1");
+      expect(number!.style.color).toBe(theme.colors.red);
     });
 
     test("It should reset the counter and set color to black", async () => {
@@ -97,14 +99,15 @@ describe("CounterPage.ts", () => {
 
       const btnIncrease = screen.getByRole("button", { name: /increase/i });
       const btnReset = screen.getByRole("button", { name: /reset/i });
-      const number = document.querySelector(".counter__number") as HTMLElement;
+      const number =
+        document.querySelector<HTMLHeadingElement>(".counter__number");
 
       await user.click(btnIncrease);
-      expect(number.textContent).toBe("1");
+      expect(number!.textContent).toBe("1");
 
       await user.click(btnReset);
-      expect(number.textContent).toBe("0");
-      expect(number.style.color).toBe(theme.colors.black);
+      expect(number!.textContent).toBe("0");
+      expect(number!.style.color).toBe(theme.colors.black);
     });
   });
 
@@ -158,16 +161,17 @@ describe("CounterPage.ts", () => {
       const btnIncrease = screen.getByRole("button", { name: /increase/i });
       const btnDecrease = screen.getByRole("button", { name: /decrease/i });
       const btnReset = screen.getByRole("button", { name: /reset/i });
-      const number = document.querySelector(".counter__number") as HTMLElement;
+      const number =
+        document.querySelector<HTMLHeadingElement>(".counter__number");
 
       await user.click(btnIncrease);
-      expect(number.style.color).toBe(theme.colors.green);
+      expect(number!.style.color).toBe(theme.colors.green);
 
       await user.click(btnReset);
-      expect(number.style.color).toBe(theme.colors.black);
+      expect(number!.style.color).toBe(theme.colors.black);
 
       await user.click(btnDecrease);
-      expect(number.style.color).toBe(theme.colors.red);
+      expect(number!.style.color).toBe(theme.colors.red);
     });
   });
 });
