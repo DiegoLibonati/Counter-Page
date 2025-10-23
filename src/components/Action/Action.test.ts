@@ -7,11 +7,13 @@ import { Action } from "@src/components/Action/Action";
 
 type RenderComponent = {
   container: HTMLButtonElement;
-  props: ActionProps;
+  props: { onClick: jest.Mock } & ActionProps;
 };
 
-const renderComponent = (custom?: Partial<ActionProps>): RenderComponent => {
-  const props: ActionProps = {
+const renderComponent = (
+  custom?: Partial<{ onClick: jest.Mock } & ActionProps>
+): RenderComponent => {
+  const props = {
     id: "action-id",
     ariaLabel: "action button",
     className: "primary",
