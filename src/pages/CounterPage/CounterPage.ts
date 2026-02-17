@@ -1,55 +1,11 @@
-import { Action } from "@src/components/Action/Action";
+import type { Page } from "@/types/pages";
 
-import { theme } from "@src/styles/theme";
+import { Action } from "@/components/Action/Action";
 
-import "@src/pages/CounterPage/CounterPage.css";
+import "@/pages/CounterPage/CounterPage.css";
 
-let count: number = 0;
-
-const Colors = (): void => {
-  const numberCounter =
-    document.querySelector<HTMLHeadingElement>(".counter__number");
-
-  if (count > 0) numberCounter!.style.color = theme.colors.green;
-  else if (count < 0) numberCounter!.style.color = theme.colors.red;
-  else numberCounter!.style.color = theme.colors.black;
-};
-
-const handleClickIncrease = () => {
-  const numberCounter =
-    document.querySelector<HTMLHeadingElement>(".counter__number");
-
-  count++;
-
-  numberCounter!.textContent = String(count);
-
-  Colors();
-};
-
-const handleClickDecrease = () => {
-  const numberCounter =
-    document.querySelector<HTMLHeadingElement>(".counter__number");
-
-  count--;
-
-  numberCounter!.textContent = String(count);
-
-  Colors();
-};
-
-const handleClickReset = () => {
-  const numberCounter =
-    document.querySelector<HTMLHeadingElement>(".counter__number");
-
-  count = 0;
-
-  numberCounter!.textContent = String(count);
-
-  Colors();
-};
-
-export const CounterPage = () => {
-  const main = document.createElement("main");
+export const CounterPage = (): Page => {
+  const main = document.createElement("main") as Page;
   main.className = "counter-page";
 
   main.innerHTML = `
@@ -63,6 +19,56 @@ export const CounterPage = () => {
   `;
 
   const actions = main.querySelector<HTMLElement>(".counter__actions");
+
+  let count = 0;
+
+  const updateColors = (): void => {
+    const numberCounter =
+      main.querySelector<HTMLHeadingElement>(".counter__number");
+
+    if (!numberCounter) return;
+
+    if (count > 0) {
+      numberCounter.style.color = "var(--color-green)";
+    } else if (count < 0) {
+      numberCounter.style.color = "var(--color-red)";
+    } else {
+      numberCounter.style.color = "var(--color-black)";
+    }
+  };
+
+  const handleClickIncrease = (): void => {
+    const numberCounter =
+      main.querySelector<HTMLHeadingElement>(".counter__number");
+
+    if (!numberCounter) return;
+
+    count++;
+    numberCounter.textContent = String(count);
+    updateColors();
+  };
+
+  const handleClickDecrease = (): void => {
+    const numberCounter =
+      main.querySelector<HTMLHeadingElement>(".counter__number");
+
+    if (!numberCounter) return;
+
+    count--;
+    numberCounter.textContent = String(count);
+    updateColors();
+  };
+
+  const handleClickReset = (): void => {
+    const numberCounter =
+      main.querySelector<HTMLHeadingElement>(".counter__number");
+
+    if (!numberCounter) return;
+
+    count = 0;
+    numberCounter.textContent = String(count);
+    updateColors();
+  };
 
   const actionDecrease = Action({
     id: "btndecrease",
@@ -81,12 +87,18 @@ export const CounterPage = () => {
   const actionIncrease = Action({
     id: "btnincrease",
     ariaLabel: "increase",
-    className: "counter__btn-reset",
+    className: "counter__btn-increase",
     children: "Increase",
     onClick: handleClickIncrease,
   });
 
   actions?.append(actionDecrease, actionReset, actionIncrease);
+
+  main.cleanup = (): void => {
+    actionDecrease.cleanup?.();
+    actionReset.cleanup?.();
+    actionIncrease.cleanup?.();
+  };
 
   return main;
 };

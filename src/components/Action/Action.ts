@@ -1,6 +1,7 @@
-import { ActionProps } from "@src/entities/props";
+import type { ActionProps } from "@/types/props";
+import type { ActionComponent } from "@/types/components";
 
-import "@src/components/Action/Action.css";
+import "@/components/Action/Action.css";
 
 export const Action = ({
   id,
@@ -8,8 +9,8 @@ export const Action = ({
   className,
   children,
   onClick,
-}: ActionProps): HTMLButtonElement => {
-  const button = document.createElement("button");
+}: ActionProps): ActionComponent => {
+  const button = document.createElement("button") as ActionComponent;
   button.id = id;
   button.setAttribute("aria-label", ariaLabel);
   button.className = `action ${className ?? ""}`;
@@ -18,6 +19,10 @@ export const Action = ({
   button.innerHTML = children ?? "";
 
   button.addEventListener("click", onClick);
+
+  button.cleanup = (): void => {
+    button.removeEventListener("click", onClick);
+  };
 
   return button;
 };
