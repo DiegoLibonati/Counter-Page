@@ -31,7 +31,7 @@ I made a web page that contains a simple counter, this counter could increment t
 #### Dependencies
 
 ```
-There are no dependencies.
+No production dependencies - Pure Vanilla TypeScript
 ```
 
 #### devDependencies
@@ -75,3 +75,7 @@ For coverage report:
 ```bash
 npm run test:coverage
 ```
+
+## Known Issues
+
+None at the moment.
