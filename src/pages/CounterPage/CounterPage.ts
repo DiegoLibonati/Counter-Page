@@ -72,21 +72,21 @@ export const CounterPage = (): Page => {
 
   const actionDecrease = Action({
     id: "btndecrease",
-    ariaLabel: "decrease",
+    ariaLabel: "Decrease counter",
     className: "counter__btn-decrease",
     children: "Decrease",
     onClick: handleClickDecrease,
   });
   const actionReset = Action({
     id: "btnreset",
-    ariaLabel: "reset",
+    ariaLabel: "Reset counter",
     className: "counter__btn-reset",
     children: "Reset",
     onClick: handleClickReset,
   });
   const actionIncrease = Action({
     id: "btnincrease",
-    ariaLabel: "increase",
+    ariaLabel: "Increase counter",
     className: "counter__btn-increase",
     children: "Increase",
     onClick: handleClickIncrease,

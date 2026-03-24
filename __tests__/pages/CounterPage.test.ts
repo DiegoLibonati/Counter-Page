@@ -44,11 +44,13 @@ describe("CounterPage", () => {
     renderPage();
 
     expect(
-      screen.getByRole("button", { name: "decrease" })
+      screen.getByRole("button", { name: "Decrease counter" })
     ).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "reset" })).toBeInTheDocument();
     expect(
-      screen.getByRole("button", { name: "increase" })
+      screen.getByRole("button", { name: "Reset counter" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: "Increase counter" })
     ).toBeInTheDocument();
   });
 
@@ -56,7 +58,9 @@ describe("CounterPage", () => {
     const user = userEvent.setup();
     renderPage();
 
-    const increaseButton = screen.getByRole("button", { name: "increase" });
+    const increaseButton = screen.getByRole("button", {
+      name: "Increase counter",
+    });
     await user.click(increaseButton);
 
     const counter =
@@ -68,7 +72,9 @@ describe("CounterPage", () => {
     const user = userEvent.setup();
     renderPage();
 
-    const decreaseButton = screen.getByRole("button", { name: "decrease" });
+    const decreaseButton = screen.getByRole("button", {
+      name: "Decrease counter",
+    });
     await user.click(decreaseButton);
 
     const counter =
@@ -80,8 +86,10 @@ describe("CounterPage", () => {
     const user = userEvent.setup();
     renderPage();
 
-    const increaseButton = screen.getByRole("button", { name: "increase" });
-    const resetButton = screen.getByRole("button", { name: "reset" });
+    const increaseButton = screen.getByRole("button", {
+      name: "Increase counter",
+    });
+    const resetButton = screen.getByRole("button", { name: "Reset counter" });
 
     await user.click(increaseButton);
     await user.click(increaseButton);
@@ -99,7 +107,9 @@ describe("CounterPage", () => {
     const user = userEvent.setup();
     renderPage();
 
-    const increaseButton = screen.getByRole("button", { name: "increase" });
+    const increaseButton = screen.getByRole("button", {
+      name: "Increase counter",
+    });
     await user.click(increaseButton);
 
     const counter =
@@ -111,7 +121,9 @@ describe("CounterPage", () => {
     const user = userEvent.setup();
     renderPage();
 
-    const decreaseButton = screen.getByRole("button", { name: "decrease" });
+    const decreaseButton = screen.getByRole("button", {
+      name: "Decrease counter",
+    });
     await user.click(decreaseButton);
 
     const counter =
@@ -123,8 +135,10 @@ describe("CounterPage", () => {
     const user = userEvent.setup();
     renderPage();
 
-    const increaseButton = screen.getByRole("button", { name: "increase" });
-    const resetButton = screen.getByRole("button", { name: "reset" });
+    const increaseButton = screen.getByRole("button", {
+      name: "Increase counter",
+    });
+    const resetButton = screen.getByRole("button", { name: "Reset counter" });
 
     await user.click(increaseButton);
     await user.click(increaseButton);
@@ -141,7 +155,9 @@ describe("CounterPage", () => {
     const user = userEvent.setup();
     renderPage();
 
-    const increaseButton = screen.getByRole("button", { name: "increase" });
+    const increaseButton = screen.getByRole("button", {
+      name: "Increase counter",
+    });
 
     await user.click(increaseButton);
     await user.click(increaseButton);
@@ -158,7 +174,9 @@ describe("CounterPage", () => {
     const user = userEvent.setup();
     renderPage();
 
-    const decreaseButton = screen.getByRole("button", { name: "decrease" });
+    const decreaseButton = screen.getByRole("button", {
+      name: "Decrease counter",
+    });
 
     await user.click(decreaseButton);
     await user.click(decreaseButton);
@@ -173,8 +191,12 @@ describe("CounterPage", () => {
     const user = userEvent.setup();
     renderPage();
 
-    const increaseButton = screen.getByRole("button", { name: "increase" });
-    const decreaseButton = screen.getByRole("button", { name: "decrease" });
+    const increaseButton = screen.getByRole("button", {
+      name: "Increase counter",
+    });
+    const decreaseButton = screen.getByRole("button", {
+      name: "Decrease counter",
+    });
 
     await user.click(increaseButton);
     await user.click(increaseButton);
