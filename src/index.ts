@@ -1,5 +1,5 @@
 import "@/index.css";
-import { CounterPage } from "@/pages/CounterPage/CounterPage";
+import CounterPage from "@/pages/CounterPage/CounterPage";
 
 const onInit = (): void => {
   const app = document.querySelector<HTMLDivElement>("#app");

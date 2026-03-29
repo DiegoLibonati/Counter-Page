@@ -1,10 +1,10 @@
 import type { Page } from "@/types/pages";
 
-import { Action } from "@/components/Action/Action";
+import Action from "@/components/Action/Action";
 
 import "@/pages/CounterPage/CounterPage.css";
 
-export const CounterPage = (): Page => {
+const CounterPage = (): Page => {
   const main = document.createElement("main") as Page;
   main.className = "counter-page";
 
@@ -102,3 +102,5 @@ export const CounterPage = (): Page => {
 
   return main;
 };
+
+export default CounterPage;

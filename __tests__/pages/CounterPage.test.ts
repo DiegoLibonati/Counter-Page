@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 
 import type { Page } from "@/types/pages";
 
-import { CounterPage } from "@/pages/CounterPage/CounterPage";
+import CounterPage from "@/pages/CounterPage/CounterPage";
 
 const renderPage = (): Page => {
   const container = CounterPage();

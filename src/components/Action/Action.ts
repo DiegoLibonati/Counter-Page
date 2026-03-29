@@ -3,7 +3,7 @@ import type { ActionComponent } from "@/types/components";
 
 import "@/components/Action/Action.css";
 
-export const Action = ({
+const Action = ({
   id,
   ariaLabel,
   className,
@@ -26,3 +26,5 @@ export const Action = ({
 
   return button;
 };
+
+export default Action;
