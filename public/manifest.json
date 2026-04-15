@@ -1,7 +1,7 @@
 {
-  "name": "Counter",
-  "short_name": "Counter",
-  "description": "I made a web page that contains a simple counter, this counter could increment the result shown on the screen, decrement that value and even do a reset to return to 0 its default value. Also if the number is positive it will be green, if it is negative it will be red and if the default is 0 it will be black.",
+  "name": "Tally",
+  "short_name": "Tally",
+  "description": "Tally is a minimalist counter web application built with vanilla TypeScript and zero runtime dependencies. It renders a single interactive counter that lets the user increment, decrement, or reset a numeric value displayed on screen.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

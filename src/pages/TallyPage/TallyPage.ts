@@ -2,11 +2,11 @@ import type { Page } from "@/types/pages";
 
 import Action from "@/components/Action/Action";
 
-import "@/pages/CounterPage/CounterPage.css";
+import "@/pages/TallyPage/TallyPage.css";
 
-const CounterPage = (): Page => {
+const TallyPage = (): Page => {
   const main = document.createElement("main") as Page;
-  main.className = "counter-page";
+  main.className = "tally-page";
 
   main.innerHTML = `
     <section class="counter">
@@ -103,4 +103,4 @@ const CounterPage = (): Page => {
   return main;
 };
 
-export default CounterPage;
+export default TallyPage;

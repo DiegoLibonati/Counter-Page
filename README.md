@@ -1,4 +1,4 @@
-# Counter Page
+# Tally
 
 ## Educational Purpose
 
@@ -17,7 +17,15 @@ The application will open automatically at `http://localhost:3000`
 
 ## Description
 
-I made a web page that contains a simple counter, this counter could increment the result shown on the screen, decrement that value and even do a reset to return to 0 its default value. Also if the number is positive it will be green, if it is negative it will be red and if the default is 0 it will be black.
+**Tally** is a minimalist counter web application built with vanilla TypeScript and zero runtime dependencies. It renders a single interactive counter that lets the user increment, decrement, or reset a numeric value displayed on screen.
+
+The counter starts at zero and responds to three actions: **Increase** adds one unit to the current value, **Decrease** subtracts one unit, and **Reset** brings the value back to zero regardless of where it stands. Each action is wired to a dedicated button with a descriptive accessible label, making the interface fully navigable via assistive technologies.
+
+Visual feedback is built into the counter display itself: the number turns **green** whenever the value is positive, **red** when it goes negative, and **black** when it sits at zero. This color coding provides an immediate, glanceable indication of the counter's state without requiring any additional UI elements.
+
+The application is structured around a clean component model — factory functions that return DOM elements and expose a `cleanup()` method to safely tear down event listeners. There is no framework, no virtual DOM, and no build-time abstractions beyond TypeScript compilation. The entire runtime footprint is the compiled output of a handful of TypeScript files.
+
+The project is fully covered by an automated test suite using Jest, Testing Library, and jsdom, and enforces strict TypeScript settings, ESLint rules, and Prettier formatting through a pre-commit hook.
 
 ## Technologies used
 
@@ -59,11 +67,7 @@ No production dependencies - Pure Vanilla TypeScript
 
 ## Portfolio Link
 
-[`https://www.diegolibonati.com.ar/#/project/Counter-Page`](https://www.diegolibonati.com.ar/#/project/Counter-Page)
-
-## Video
-
-https://user-images.githubusercontent.com/99032604/198900237-ea0835d1-7b2f-4452-8c92-807e9f60e859.mp4
+[`https://www.diegolibonati.com.ar/#/project/tally`](https://www.diegolibonati.com.ar/#/project/tally)
 
 ## Testing
 
