@@ -1,7 +1,7 @@
 {
   "name": "Tally",
   "short_name": "Tally",
-  "description": "Tally is a minimalist counter web application built with vanilla TypeScript and zero runtime dependencies. It renders a single interactive counter that lets the user increment, decrement, or reset a numeric value displayed on screen.",
+  "description": "Tally is a minimalist counter web application built with vanilla TypeScript and zero runtime dependencies.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
