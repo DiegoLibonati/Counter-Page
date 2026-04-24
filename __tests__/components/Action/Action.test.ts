@@ -60,26 +60,6 @@ describe("Action", () => {
       renderComponent();
       expect(screen.getByRole("button")).toHaveTextContent("Click");
     });
-
-    it("should render with empty content when children is not provided", () => {
-      const element = Action({
-        id: "action-btn",
-        ariaLabel: "Click me",
-        onClick: mockOnClick,
-      });
-      document.body.appendChild(element);
-      expect(screen.getByRole("button")).toHaveTextContent("");
-    });
-
-    it("should apply only the action class when className is not provided", () => {
-      const element = Action({
-        id: "action-btn",
-        ariaLabel: "Click me",
-        onClick: mockOnClick,
-      });
-      document.body.appendChild(element);
-      expect(screen.getByRole("button")).toHaveClass("action");
-    });
   });
 
   describe("behavior", () => {
@@ -98,6 +78,23 @@ describe("Action", () => {
       await user.click(button);
       await user.click(button);
       expect(mockOnClick).toHaveBeenCalledTimes(3);
+    });
+
+    it("should not call onClick when not clicked", () => {
+      renderComponent();
+      expect(mockOnClick).not.toHaveBeenCalled();
+    });
+  });
+
+  describe("edge cases", () => {
+    it("should render empty content when children is undefined", () => {
+      renderComponent({ children: undefined });
+      expect(screen.getByRole("button")).toHaveTextContent("");
+    });
+
+    it("should apply only the action class when className is undefined", () => {
+      renderComponent({ className: undefined });
+      expect(screen.getByRole("button")).toHaveClass("action");
     });
   });
 

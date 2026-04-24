@@ -14,6 +14,7 @@ const renderPage = (): Page => {
 describe("TallyPage", () => {
   afterEach(() => {
     document.body.innerHTML = "";
+    jest.clearAllMocks();
   });
 
   describe("rendering", () => {
