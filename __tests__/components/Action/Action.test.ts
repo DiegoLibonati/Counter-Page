@@ -88,12 +88,12 @@ describe("Action", () => {
 
   describe("edge cases", () => {
     it("should render empty content when children is undefined", () => {
-      renderComponent({ children: undefined });
+      renderComponent({ children: undefined! });
       expect(screen.getByRole("button")).toHaveTextContent("");
     });
 
     it("should apply only the action class when className is undefined", () => {
-      renderComponent({ className: undefined });
+      renderComponent({ className: undefined! });
       expect(screen.getByRole("button")).toHaveClass("action");
     });
   });

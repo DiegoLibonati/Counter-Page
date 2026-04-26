@@ -1,6 +1,6 @@
 interface DefaultProps {
-  className?: string | undefined;
-  children?: string | undefined;
+  className?: string;
+  children?: string;
 }
 
 export interface ActionProps extends DefaultProps {
